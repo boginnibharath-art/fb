@@ -1,0 +1,121 @@
+// Injected CSS as a string so this file remains valid JavaScript
+const css = `/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fffaf0;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero button {
+  background-color: #ff6347;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero button:hover {
+  background-color: #e5533d;
+}
+
+/* Menu Section */
+.menu {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item button {
+  margin-top: 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.item button:hover {
+  background-color: #e5533d;
+}
+
+/* Footer */
+footer {
+  background-color: #ff6347;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+`;
+
+// Create and append a <style> element with the CSS
+const styleEl = document.createElement('style');
+styleEl.type = 'text/css';
+styleEl.appendChild(document.createTextNode(css));
+document.head.appendChild(styleEl);
